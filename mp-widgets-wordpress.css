@@ -1,0 +1,359 @@
+/* Granger Widget Customization */
+
+/* CSS Color Variables                        */
+/*--------------------------------------------*/
+
+:host {
+    --primary: #aad43c;
+    --primary-dark: #292929;
+      --form-valid: #aad43c;
+  }
+  
+  /* COMPONENT CONTAINER                        */
+  /*--------------------------------------------*/
+  .mppw-component-container, .pnsWidgetContainer {
+      font-family: "Poppins",Helvetica,Arial,sans-serif;
+      color: #000;
+      text-align: left;
+  }
+  
+  /* Custom Form                                */
+  /*--------------------------------------------*/
+  .mpp-mt-0 {
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+  }
+  
+  /* FORM FIELDS                                */
+  /*--------------------------------------------*/
+  
+  .mppw-form-field__label, .pnsWidgetFieldLabel {
+      font-weight: 500;
+      text-transform: uppercase;
+  }
+  
+  /* Buttons                                    */
+  /*--------------------------------------------*/
+  .mppw-btn, .mppw-btn primary, .pnsWidgetSubmit {
+      text-transform: uppercase;
+      min-width: 150px;
+      display: inline-block;
+      padding: 17px 25px 16px;
+      background: #555555;
+      border-radius: 0px;
+      margin: 20px auto 0 -9px;
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0 0 20px;
+      letter-spacing: 2pt;
+  }
+  
+  .mppw-btn:hover {
+      background: #aad43c; /*grn green*/
+  }
+  
+  /* MOBILE */
+  * {
+      box-sizing: border-box;
+      font-family: "Poppins",Helvetica,Arial,sans-serif;
+  }
+  
+  /* groups widget */
+  .mppw-component-container h1 {font-size:30px; text-align:center; letter-spacing:0.05em;}
+  .mppw-component-container a, .mppw-component-container button, .mppw-component-container input[type="submit"], .mppw-component-container input[type="button"] {transition:all 0.25s ease;}
+  .mppw-btn.secondary:hover, .mppw-btn.secondary:focus {background:var(--primary); color:#fff; border-color:var(--primary);}
+  .mppw-card--grid {grid-template-columns:31% 31% 31%; grid-gap:50px 35px;}
+    .mpp-card {box-shadow:0 0 #000; border-radius:0;}
+      .mpp-card--badge {background:#fff; color:var(--primary-dark); padding:12px 10px; border-radius:0; font-size:18px; line-height:1; letter-spacing:-0.5pt; font-weight:500; text-transform:uppercase; text-align:center; opacity:1;}
+      .mpp-card--subtitle {font-weight:400; font-size:15px; line-height:1.4;}
+      .mpp-card--description {margin-top:12px;}
+      
+  .mppw-form-field__control {color:var(--primary-dark); padding:28px 13px 12px 13px;}
+  .mppw-form-field__control:not([value=""]) + .mppw-form-field__label, .mppw-form-field__control:focus + .mppw-form-field__label {color:var(--primary-dark);}
+  
+  .mpp-innerpage {font-size:inherit;}
+    .mpp-innerpage a {color:var(--primary);}
+    .mpp-innerpage a:hover, .mpp-innerpage a:focus {color:var(--primary);}
+    .mpp-innerpage h1 {font-size:42px; line-height:1.2; text-align:left; padding-top:20px;}
+    .mpp-innerpage h2 {font-size:20px; line-height:1.2;}
+    .mpp-innerpage--contact {border-radius:0;}
+    .mpp-innerpage ul.mpp-innerpage--contacts {margin-top:5px;}
+    .mpp-innerpage--contacts-wrapper h3, .mpp-innerpage .progress--container h3 {font-size:14px; line-height:1.5; color:var(--primary-dark);}
+    .mpp-innerpage--contact-badge {background:var(--primary);}
+    .mpp-innerpage--placeholder {background:#555;}
+  .mpp-form--tabs label:active, .mpp-form--tabs label.active {border-bottom:3px solid var(--primary); color:var(--primary);}
+  .mpp-form--tabs label:hover, .mpp-form--tabs label:focus {border-bottom:3px solid var(--primary);}
+  
+  #signupContainer, #inquiryContainer {padding-top:20px;}
+  #signUpTab {visibility: hidden;}
+  
+  /* Hide built in title since it's in the wordpress page */
+  div > div > div.mppw-form-wrapper > h1 {display: none;}
+  
+  .mppw-blue, .mppw-form-field__alt-label, .mppw-form-field_upload-label {color:var(--primary-dark); font-size:1em; font-weight:500; text-transform:uppercase;}
+  
+  /*--------------------------------------------*/
+  /* Icons                                      */
+  /*--------------------------------------------*/
+  /* group finder default image */
+  .mppw-icon-group {
+      background: url(https://grangerchurch.com/wp-content/themes/granger2017/images/icon-group-gcc.svg) no-repeat top center;
+  }
+  
+  /* Event Widget */
+  /*#detailsContainer > section > p*/
+  
+  .mppw-event-gray-out td {
+      color: #bcbcbc !important;
+  }
+  
+  
+  
+  #detailsContainer > div.mpp-innerpage--special {
+      -webkit-appearance:none;
+      appearance: none;
+      display: none;
+  }
+  
+  /*
+  #detailsContainer > div:nth-child(2), #detailsContainer > div:nth-child(3), #detailsContainer > div:nth-child(7) {
+      -webkit-appearance:none !important;
+      appearance: none !important;
+      display: none !important;
+  }
+  */
+  
+
+#detailsContainer > section > div.mpp-innerpage--contacts-wrapper, #map, #mapAddress, #registrationForm > h1  {
+      -webkit-appearance:none;
+      appearance: none;
+      display: none;
+  }
+
+
+.instructions-heading {
+/*    display: block; */
+	display: inline-block;
+	width: fit-content;
+	text-transform: uppercase;
+	border-bottom: 3px solid #a8d424;
+    font-size: 1.2em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	margin-top: 2.2em;
+	margin-bottom: .5em;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+  
+  
+  /* Plan a Visit Widget */
+  #mpp-plan-your-visit-container input.mppw-btn:hover {color:#555; background:#fff;}
+  #mpp-plan-your-visit-container .mpp-innerpage p {color:#fff; line-height:24px;}
+  #mpp-plan-your-visit-container .mpp-innerpage h3 {color:#fff;}
+  
+  #visitDetailsContainer .mpp-innerpage p {color:#fff;}
+  #visitDetailsContainer .mpp-innerpage h2 {color:#fff;}
+  #visitDetailsContainer #visitDetailsForm {color:#555;}
+  #visitDetailsContainer #submitRegistrationButton {margin:0;}
+  #visitDetailsContainer #submitRegistrationButton:hover {color:#555; background:#fff;}
+  
+  
+  /* Event Registration Detail Widget */
+  #detailsContainer > section > h3  {display: none;}
+  #detailsContainer > section > div.mpp-innerpage--fixed-imgcontainer.mpp-innerpage--fixed-imgplaceholder  {display: none;}
+  #detailsContainer > section > img {display: none;}
+  #registrationForm .product-form h3 {margin-top:10px; padding:5px;}
+  #registrationForm .product-form__control {margin:10px 0 3px 0; padding:0 10px;}
+  #registrationForm .product-form__control tr:last-child td {border-bottom:0;}
+  #registrationForm .option-name, #registrationForm .option-qty, #registrationForm .option-price {padding:10px 0; color:var(--primary-dark);}
+  #registrationForm .mppw-form-field-alt label {margin-bottom:0;}
+  #registrationForm select.mppw-form-field_alt-control {padding:15px 10px !important;}
+  #registrationForm .mppw-form-field_alt-control {padding:1px 10px !important;}
+  #registrationForm .mppw-form-field_alt-control label {margin:10px 0;}
+  #registrationForm input#promoCodeText {padding:9px 10px; border:1px solid var(--primary-dark); border-radius:4px;}
+  #registrationForm button#addPromoCodeButton {color:#fff; border:0; text-transform:uppercase; display:inline-block; padding:10px 20px; background:#555555; border-radius:0px; font-weight:600; font-size:14px; letter-spacing:2pt; transition:all .3s ease;}
+  #registrationForm button#addPromoCodeButton:hover {background:#aad43c; cursor:pointer;}
+  
+  #pledgeForm .mppw-form-field {padding-bottom:0.5rem;}
+  #pledgeAmountButtonWrapper input[type="button"] {margin-bottom:0;}
+  
+  @media only screen and (max-width: 782px) {
+    .form--row.toggle--btn-wrapper {flex-wrap:wrap;}
+    #pledgeAmountButtonWrapper input[type="button"] {margin-bottom:10px;}
+    .form--row {width:100%; display:block;}
+    .form--col {flex:1 1 auto; padding-right:0;}
+  }
+  @media(max-width:760px) {
+      #registrationForm #promoCodeContainer .mppw-form-field label {display:block;}
+  }
+  
+  #verfificationContainer > div.mpp-innerpage > h3 {
+      display: none;
+  }
+  
+  /* #saveAndAddButton {display: none;} */
+  
+  /* pledge widget */
+  #pledgeCampaignDetails {display:none;}
+  /* form#pledgeForm .form--row:nth-of-type(2) .form--col:first-child {display:none;}
+  form#pledgeForm .form--row:nth-of-type(2) .form--col:last-child {display:none;} */
+  form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row {padding-bottom:0 !important;}
+  form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row .form--col:first-child {padding-right:0 !important;}
+  /* form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row .form--col:last-child {display:none;} */
+  #pledgeAmountButtonWrapper input[type="button"] {-webkit-appearance:none;}
+  #FirstInstallmentDate {-webkit-appearance:none;}
+  #LastInstallmentDate {-webkit-appearance:none;}
+  #createPledge {-webkit-appearance:none;}
+  
+  
+  /* Church Online Widget */
+  
+  /* .mp-embed-2022 input.mppw-btn.primary {color:var(--txt-white); background:var(--bg-green);}
+  .mp-embed-2022 input.mppw-btn.primary:hover {color:var(--txt-white); background:var(--bg-dark);} */
+  
+  /* Pledge */
+  #TotalPledge {
+      font-size: 36px;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  
+  #InstallmentAmount[type=number] {
+      -moz-appearance: textfield;
+  }
+  
+  @media(max-width:760px) {
+      input#InstallmentAmount {padding-top:50px; font-size:16px;}
+      input#FirstName {font-size:16px;}
+      input#LastName {font-size:16px;}
+      input#Email {font-size:16px;}
+      input#MobilePhoneNumber {font-size:16px;}
+  }
+  
+  /* My Pledge Widget 
+  .mpp-card--description {
+      -webkit-appearance:none;
+      appearance: none;
+      display: none;
+  }
+  */
+  
+  /* My Statements */
+  #myContributionFooter {
+      -webkit-appearance:none;
+      appearance: none;
+      display: none;
+  }
+  
+  /* hidden because it hides group desc.
+   * .mpp-innerpage--description {display:none;}
+  */
+  
+  .mpp-innerpage--special {display:none;}
+
+/*
+ * Customization for JohnMcGuire/PointsNorth Reference app
+ * https://grangerchurch.com/submit-reference/
+*/
+.pnsWidgetFormTitle {
+    font-size: 20pt;
+    font-weight: bold;
+    color: black;
+	border: none;
+}
+
+.pnsWidgetVolunteerName {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.pnsWidgetInstructions {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #404040;
+    margin: 20px 0 20px 0;
+}
+
+.pnsWidgetTroubleshoot {
+    font-size: 6pt;
+    color: red;
+    visibility: hidden;
+}
+
+.pnsWidgetSection {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #404040;
+}
+
+.pnsWidgetFieldLabel {
+	font-size: 1.1em;
+}
+.pnsWidgetFieldGroup {
+    margin: 20px 0 20px 0;
+    width: 100%;
+	border: 1px solid;
+	border-color: #b4c5cf;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    padding: 10px;
+}
+
+.pnsWidgetTextField {
+    padding: 15px !important;
+    font-size: 11pt !important;
+/*    border: solid 1px #c0c0c0 !important;
+    border-radius: 5px !important;*/
+    width: 100% !important;
+}
+
+.pnsWidgetTextField:focus{
+    outline: none !important;
+}
+
+.pnsWidgetRadioField {
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--form-field-border);
+    border-radius: 50%;
+	vertical-align: middle;
+}
+
+input {
+	accent-color: #aad43c;
+}
+
+.pnsWidgetResultMessage {
+    padding: 10px 0 10px 0;
+    color: red;
+
+}
+
+.pnsWidgetWorkingMessage {
+    color: #669FED;
+    font-weight: bold;
+}
+
+.pnsWidgetWorkingSpinner {
+    width: 25px;
+    width: 25px;
+    vertical-align: -4px;
+    padding: 0 0 0 5px;
+}
+
+.pnsWidgetFieldGroupSelect {
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #c0c0c0;
+    font-size: 12pt;
+    outline: none;
+}
