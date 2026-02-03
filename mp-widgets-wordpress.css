@@ -103,35 +103,22 @@
   }
   
   /* Event Widget */
-  /*#detailsContainer > section > p*/
-  
+
   .mppw-event-gray-out td {
       color: #bcbcbc !important;
   }
-  
-  
   
   #detailsContainer > div.mpp-innerpage--special {
       -webkit-appearance:none;
       appearance: none;
       display: none;
   }
-  
-  /*
-  #detailsContainer > div:nth-child(2), #detailsContainer > div:nth-child(3), #detailsContainer > div:nth-child(7) {
-      -webkit-appearance:none !important;
-      appearance: none !important;
-      display: none !important;
-  }
-  */
-  
 
 #detailsContainer > section > div.mpp-innerpage--contacts-wrapper, #map, #mapAddress, #registrationForm > h1  {
       -webkit-appearance:none;
       appearance: none;
       display: none;
   }
-
 
 .instructions-heading {
 /*    display: block; */
@@ -149,97 +136,83 @@
     font-weight: bold;
     unicode-bidi: isolate;
 }
+ /* Plan a Visit Widget */
+#mpp-plan-your-visit-container input.mppw-btn:hover {color:#555; background:#fff;}
+#mpp-plan-your-visit-container .mpp-innerpage p {color:#fff; line-height:24px;}
+#mpp-plan-your-visit-container .mpp-innerpage h3 {color:#fff;}
   
+#visitDetailsContainer .mpp-innerpage p {color:#fff;}
+#visitDetailsContainer .mpp-innerpage h2 {color:#fff;}
+#visitDetailsContainer #visitDetailsForm {color:#555;}
+#visitDetailsContainer #submitRegistrationButton {margin:0;}
+#visitDetailsContainer #submitRegistrationButton:hover {color:#555; background:#fff;}
+    
+/* Event Registration Detail Widget */
+#detailsContainer > section > h3  {display: none;}
+#detailsContainer > section > div.mpp-innerpage--fixed-imgcontainer.mpp-innerpage--fixed-imgplaceholder  {display: none;}
+#detailsContainer > section > img {display: none;}
+#registrationForm .product-form h3 {margin-top:10px; padding:5px;}
+#registrationForm .product-form__control {margin:10px 0 3px 0; padding:0 10px;}
+#registrationForm .product-form__control tr:last-child td {border-bottom:0;}
+#registrationForm .option-name, #registrationForm .option-qty, #registrationForm .option-price {padding:10px 0; color:var(--primary-dark);}
+#registrationForm .mppw-form-field-alt label {margin-bottom:0;}
+#registrationForm select.mppw-form-field_alt-control {padding:15px 10px !important;}
+#registrationForm .mppw-form-field_alt-control {padding:1px 10px !important;}
+#registrationForm .mppw-form-field_alt-control label {margin:10px 0;}
+#registrationForm input#promoCodeText {padding:9px 10px; border:1px solid var(--primary-dark); border-radius:4px;}
+#registrationForm button#addPromoCodeButton {color:#fff; border:0; text-transform:uppercase; display:inline-block; padding:10px 20px; background:#555555; border-radius:0px; font-weight:600; font-size:14px; letter-spacing:2pt; transition:all .3s ease;}
+#registrationForm button#addPromoCodeButton:hover {background:#aad43c; cursor:pointer;}
+
+#pledgeForm .mppw-form-field {padding-bottom:0.5rem;}
+#pledgeAmountButtonWrapper input[type="button"] {margin-bottom:0;}
+
+@media only screen and (max-width: 782px) {
+.form--row.toggle--btn-wrapper {flex-wrap:wrap;}
+#pledgeAmountButtonWrapper input[type="button"] {margin-bottom:10px;}
+.form--row {width:100%; display:block;}
+.form--col {flex:1 1 auto; padding-right:0;}
+}
+@media(max-width:760px) {
+    #registrationForm #promoCodeContainer .mppw-form-field label {display:block;}
+}
+
+#verfificationContainer > div.mpp-innerpage > h3 {
+    display: none;
+}
+
+#pledgeCampaignDetails {display:none;}
+form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row {padding-bottom:0 !important;}
+form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row .form--col:first-child {padding-right:0 !important;}
+
+#pledgeAmountButtonWrapper input[type="button"] {-webkit-appearance:none;}
+#FirstInstallmentDate {-webkit-appearance:none;}
+#LastInstallmentDate {-webkit-appearance:none;}
+#createPledge {-webkit-appearance:none;}
+
+/* Pledge */
+#TotalPledge {
+    font-size: 36px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#InstallmentAmount[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media(max-width:760px) {
+    input#InstallmentAmount {padding-top:50px; font-size:16px;}
+    input#FirstName {font-size:16px;}
+    input#LastName {font-size:16px;}
+    input#Email {font-size:16px;}
+    input#MobilePhoneNumber {font-size:16px;}
+}
   
-  /* Plan a Visit Widget */
-  #mpp-plan-your-visit-container input.mppw-btn:hover {color:#555; background:#fff;}
-  #mpp-plan-your-visit-container .mpp-innerpage p {color:#fff; line-height:24px;}
-  #mpp-plan-your-visit-container .mpp-innerpage h3 {color:#fff;}
-  
-  #visitDetailsContainer .mpp-innerpage p {color:#fff;}
-  #visitDetailsContainer .mpp-innerpage h2 {color:#fff;}
-  #visitDetailsContainer #visitDetailsForm {color:#555;}
-  #visitDetailsContainer #submitRegistrationButton {margin:0;}
-  #visitDetailsContainer #submitRegistrationButton:hover {color:#555; background:#fff;}
-  
-  
-  /* Event Registration Detail Widget */
-  #detailsContainer > section > h3  {display: none;}
-  #detailsContainer > section > div.mpp-innerpage--fixed-imgcontainer.mpp-innerpage--fixed-imgplaceholder  {display: none;}
-  #detailsContainer > section > img {display: none;}
-  #registrationForm .product-form h3 {margin-top:10px; padding:5px;}
-  #registrationForm .product-form__control {margin:10px 0 3px 0; padding:0 10px;}
-  #registrationForm .product-form__control tr:last-child td {border-bottom:0;}
-  #registrationForm .option-name, #registrationForm .option-qty, #registrationForm .option-price {padding:10px 0; color:var(--primary-dark);}
-  #registrationForm .mppw-form-field-alt label {margin-bottom:0;}
-  #registrationForm select.mppw-form-field_alt-control {padding:15px 10px !important;}
-  #registrationForm .mppw-form-field_alt-control {padding:1px 10px !important;}
-  #registrationForm .mppw-form-field_alt-control label {margin:10px 0;}
-  #registrationForm input#promoCodeText {padding:9px 10px; border:1px solid var(--primary-dark); border-radius:4px;}
-  #registrationForm button#addPromoCodeButton {color:#fff; border:0; text-transform:uppercase; display:inline-block; padding:10px 20px; background:#555555; border-radius:0px; font-weight:600; font-size:14px; letter-spacing:2pt; transition:all .3s ease;}
-  #registrationForm button#addPromoCodeButton:hover {background:#aad43c; cursor:pointer;}
-  
-  #pledgeForm .mppw-form-field {padding-bottom:0.5rem;}
-  #pledgeAmountButtonWrapper input[type="button"] {margin-bottom:0;}
-  
-  @media only screen and (max-width: 782px) {
-    .form--row.toggle--btn-wrapper {flex-wrap:wrap;}
-    #pledgeAmountButtonWrapper input[type="button"] {margin-bottom:10px;}
-    .form--row {width:100%; display:block;}
-    .form--col {flex:1 1 auto; padding-right:0;}
-  }
-  @media(max-width:760px) {
-      #registrationForm #promoCodeContainer .mppw-form-field label {display:block;}
-  }
-  
-  #verfificationContainer > div.mpp-innerpage > h3 {
-      display: none;
-  }
-  
-  /* #saveAndAddButton {display: none;} */
-  
-  /* pledge widget */
-  #pledgeCampaignDetails {display:none;}
-  /* form#pledgeForm .form--row:nth-of-type(2) .form--col:first-child {display:none;}
-  form#pledgeForm .form--row:nth-of-type(2) .form--col:last-child {display:none;} */
-  form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row {padding-bottom:0 !important;}
-  form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row .form--col:first-child {padding-right:0 !important;}
-  /* form#pledgeForm .form--row:nth-of-type(2) .form--col .form--row .form--col:last-child {display:none;} */
-  #pledgeAmountButtonWrapper input[type="button"] {-webkit-appearance:none;}
-  #FirstInstallmentDate {-webkit-appearance:none;}
-  #LastInstallmentDate {-webkit-appearance:none;}
-  #createPledge {-webkit-appearance:none;}
-  
-  
-  /* Church Online Widget */
-  
-  /* .mp-embed-2022 input.mppw-btn.primary {color:var(--txt-white); background:var(--bg-green);}
-  .mp-embed-2022 input.mppw-btn.primary:hover {color:var(--txt-white); background:var(--bg-dark);} */
-  
-  /* Pledge */
-  #TotalPledge {
-      font-size: 36px;
-  }
-  
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-  }
-  
-  #InstallmentAmount[type=number] {
-      -moz-appearance: textfield;
-  }
-  
-  @media(max-width:760px) {
-      input#InstallmentAmount {padding-top:50px; font-size:16px;}
-      input#FirstName {font-size:16px;}
-      input#LastName {font-size:16px;}
-      input#Email {font-size:16px;}
-      input#MobilePhoneNumber {font-size:16px;}
-  }
-  
-  /* My Pledge Widget 
+/* My Pledge Widget 
   .mpp-card--description {
       -webkit-appearance:none;
       appearance: none;
@@ -247,18 +220,14 @@
   }
   */
   
-  /* My Statements */
-  #myContributionFooter {
+/* My Statements */
+#myContributionFooter {
       -webkit-appearance:none;
       appearance: none;
       display: none;
   }
   
-  /* hidden because it hides group desc.
-   * .mpp-innerpage--description {display:none;}
-  */
-  
-  .mpp-innerpage--special {display:none;}
+.mpp-innerpage--special {display:none;}
 
 /*
  * Customization for JohnMcGuire/PointsNorth Reference app

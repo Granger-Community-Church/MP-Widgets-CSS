@@ -1,1 +1,101 @@
-/* placeholder for webflow site styles */
+/* placeholder for mp widgets webflow site styles 
+ * more to come as widgets get migrated
+*/
+
+
+/* Customization for JohnMcGuire/PointsNorth Reference app
+ * https://grangerchurch.com/submit-reference/
+ */
+.pnsWidgetFormTitle {
+    font-size: 20pt;
+    font-weight: bold;
+    color: black;
+	border: none;
+}
+
+.pnsWidgetVolunteerName {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.pnsWidgetInstructions {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #404040;
+    margin: 20px 0 20px 0;
+}
+
+.pnsWidgetTroubleshoot {
+    font-size: 6pt;
+    color: red;
+    visibility: hidden;
+}
+
+.pnsWidgetSection {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #404040;
+}
+
+.pnsWidgetFieldLabel {
+	font-size: 1.1em;
+}
+.pnsWidgetFieldGroup {
+    margin: 20px 0 20px 0;
+    width: 100%;
+	border: 1px solid;
+	border-color: #b4c5cf;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    padding: 10px;
+}
+
+.pnsWidgetTextField {
+    padding: 15px !important;
+    font-size: 11pt !important;
+/*    border: solid 1px #c0c0c0 !important;
+    border-radius: 5px !important;*/
+    width: 100% !important;
+}
+
+.pnsWidgetTextField:focus{
+    outline: none !important;
+}
+
+.pnsWidgetRadioField {
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--form-field-border);
+    border-radius: 50%;
+	vertical-align: middle;
+}
+
+input {
+	accent-color: #aad43c;
+}
+
+.pnsWidgetResultMessage {
+    padding: 10px 0 10px 0;
+    color: red;
+
+}
+
+.pnsWidgetWorkingMessage {
+    color: #669FED;
+    font-weight: bold;
+}
+
+.pnsWidgetWorkingSpinner {
+    width: 25px;
+    width: 25px;
+    vertical-align: -4px;
+    padding: 0 0 0 5px;
+}
+
+.pnsWidgetFieldGroupSelect {
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #c0c0c0;
+    font-size: 12pt;
+    outline: none;
+}
