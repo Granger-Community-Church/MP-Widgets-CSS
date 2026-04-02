@@ -765,3 +765,12 @@ input {
 .mp-person-card .mp-card-title {
   font-size: 1.25rem;
 }
+
+.event-finder-widget .ge-title {color:#333;}
+.event-finder-widget .ge-date-badge {border-radius:0; left:20px; padding:0.65rem 0.75rem 0.5rem;}
+	.event-finder-widget .ge-date-badge .ge-badge-month {color:#333; font-size:1rem; font-weight:600;}
+	.event-finder-widget .ge-date-badge .ge-badge-day {color:#333; font-size:1.8rem; font-weight:600;}
+@media (max-width:767px) {
+	.event-finder-widget .container {padding:0;}
+	.event-finder-widget .mp-container {max-width:none;}
+}
