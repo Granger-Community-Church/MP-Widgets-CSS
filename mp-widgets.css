@@ -591,7 +591,7 @@ input {
 .ge-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.12); }
 
 /* ── Image + Date Badge ── */
-.ge-media { position:relative; width:100%; padding-top:60%; overflow:hidden; background:#e0e0e0; }
+.ge-media { position:relative; width:100%; padding-top:56.25%; overflow:hidden; background:#e0e0e0; }
 .ge-media img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; }
 .ge-media-fallback {
   position:absolute; top:0; left:0; width:100%; height:100%;
@@ -675,7 +675,7 @@ input {
 /* ── Modal ── */
 .ge-overlay {
   display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-  background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:flex-start;
+  background:rgba(0,0,0,0.6); z-index:99999; justify-content:center; align-items:flex-start;
   padding:2rem 1rem; overflow-y:auto; font-family:Poppins, sans-serif;
 }
 .ge-overlay.ge-open { display:flex; }
@@ -691,8 +691,8 @@ input {
 .ge-modal-body { padding:1.5rem 2rem 2rem; }
 .ge-modal-title { font-size:1.5rem; font-weight:700; margin:0 0 0.5rem; color:#092c4c; }
 
-.ge-modal-meta { font-size:0.95rem; color:#555; margin-bottom:1.25rem; display:flex; flex-wrap:wrap; gap:0.25rem 1.25rem; }
-.ge-modal-loc { display:flex; align-items:center; gap:0.4rem; }
+.ge-modal-meta { font-size:0.95rem; color:#555; margin-bottom:0.25rem; display:flex; flex-wrap:wrap; gap:0.25rem 1.25rem; }
+.ge-modal-loc { display:flex; align-items:center; gap:0.4rem; font-size:0.95rem; color:#555; margin-bottom:1rem; }
 .ge-modal-loc .ge-campus-dot { width:0.5rem; height:0.5rem; }
 
 .ge-modal-desc { font-size:1rem; line-height:1.7; color:#333; }
