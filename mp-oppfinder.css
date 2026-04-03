@@ -1,0 +1,66 @@
+/* ═══════════════════════════════════════════════════════
+ * Opportunity Finder Widget
+ * <mpp-opportunity-finder> on /on-campus, /volunteer
+ * Imports shared base, then applies opp-finder overrides.
+ * ═══════════════════════════════════════════════════════ */
+@import url("mp-widgets.css");
+
+/* ── Hide campus filter, advanced search, and start dates ── */
+#searchForm .mppw-form-field:has(#congregationId) { display:none !important; }
+#searchForm .mppw-right { display:none !important; }
+#advancedSearchSection { display:none !important; }
+h4.opportunity-start-date { display:none; }
+
+/* ── Card Grid (responsive, matches GrangerEvents) ── */
+#resultsContainer.mppw-card--grid {
+  display:grid; grid-template-columns:1fr; gap:1.5rem;
+  font-family:Poppins, sans-serif;
+}
+@media(min-width:600px){ #resultsContainer.mppw-card--grid{ grid-template-columns:repeat(2, 1fr); } }
+@media(min-width:1024px){ #resultsContainer.mppw-card--grid{ grid-template-columns:repeat(3, 1fr); } }
+
+/* ── Card ── */
+#resultsContainer .mpp-card {
+  display:flex; flex-direction:column; overflow:hidden; cursor:pointer;
+  background:#efefef; border-radius:8px; height:100%;
+  box-shadow:none; transition:box-shadow 0.2s;
+}
+#resultsContainer .mpp-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.12); }
+
+/* ── Card Image (16:9) ── */
+#resultsContainer .mpp-card--header {
+  position:relative; width:100%; padding-top:56.25%;
+  overflow:hidden; background:#e0e0e0;
+}
+#resultsContainer .mpp-card--image {
+  position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;
+}
+
+/* ── Card Body ── */
+#resultsContainer .mpp-card--body {
+  padding:1rem 1.25rem; flex:1; display:flex; flex-direction:column;
+}
+#resultsContainer .mpp-card--title {
+  font-size:1.5rem; font-weight:600; margin:0 0 0.5rem;
+  line-height:1.3; color:#092c4c;
+}
+#resultsContainer h4.opportunity-location {
+  font-size:0.875rem; color:#555; font-weight:400; margin:0 0 0.35rem;
+}
+#resultsContainer .mpp-card--description {
+  font-size:0.95rem; color:#555; line-height:1.6; flex:1;
+  margin:0.5rem 0 1rem; overflow:hidden;
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
+}
+
+/* ── Card Footer / Button (matches ge-more-info) ── */
+#resultsContainer .mpp-card--footer { padding:0 1.25rem 1.25rem; }
+#resultsContainer .mpp-card--footer .mppw-btn {
+  display:inline-block; padding:12px 24px;
+  background:#333; color:#fff; text-decoration:none;
+  border-radius:8px; font-family:Poppins, sans-serif;
+  font-weight:300; font-size:1rem; text-transform:uppercase;
+  letter-spacing:0.03em; transition:background 0.2s;
+  border:none; cursor:pointer; min-width:auto; margin:0;
+}
+#resultsContainer .mpp-card--footer .mppw-btn:hover { background:#2c9fa1; color:#fff; }
