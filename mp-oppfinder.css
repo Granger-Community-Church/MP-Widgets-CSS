@@ -13,7 +13,7 @@
 
 /* ── Hide all filters except keyword search ── */
 #searchForm .mppw-form-field { display:none !important; }
-#searchForm .mppw-form-field:has(#keywords) { display:block !important; }
+#searchForm .mppw-form-field:has(#searchText) { display:block !important; }
 #searchForm .mppw-right { display:none !important; }
 #advancedSearchSection { display:none !important; }
 h4.opportunity-start-date { display:none; }
