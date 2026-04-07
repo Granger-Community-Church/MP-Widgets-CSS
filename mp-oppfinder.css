@@ -1,12 +1,19 @@
 /* ═══════════════════════════════════════════════════════
  * Opportunity Finder Widget
  * <mpp-opportunity-finder> on /on-campus, /volunteer
- * Imports shared base, then applies opp-finder overrides.
+ * <mpp-opportunity-details> on /volunteer-details
+ * Imports shared bases, then applies opp-finder overrides.
  * ═══════════════════════════════════════════════════════ */
 @import url("mp-widgets.css");
+@import url("https://cdn.jsdelivr.net/gh/Granger-Community-Church/MPCustomWidgets@main/dist/css/mp-custom.css");
 
-/* ── Hide campus filter, advanced search, and start dates ── */
-#searchForm .mppw-form-field:has(#congregationId) { display:none !important; }
+/* ══════════════════════════════════════════════════════════
+ * LISTING PAGE — <mpp-opportunity-finder>
+ * ══════════════════════════════════════════════════════════ */
+
+/* ── Hide all filters except keyword search ── */
+#searchForm .mppw-form-field { display:none !important; }
+#searchForm .mppw-form-field:has(#keywords) { display:block !important; }
 #searchForm .mppw-right { display:none !important; }
 #advancedSearchSection { display:none !important; }
 h4.opportunity-start-date { display:none; }
@@ -64,3 +71,48 @@ h4.opportunity-start-date { display:none; }
   border:none; cursor:pointer; min-width:auto; margin:0;
 }
 #resultsContainer .mpp-card--footer .mppw-btn:hover { background:#2c9fa1; color:#fff; }
+
+/* ══════════════════════════════════════════════════════════
+ * DETAIL PAGE — <mpp-opportunity-details>
+ * Renders inside shadow DOM; this file must be loaded
+ * inside the shadow root for these rules to apply.
+ * ══════════════════════════════════════════════════════════ */
+
+/* ── Back link ── */
+.mpp-innerpage--back a {
+  color:#333 !important; text-decoration:none;
+}
+.mpp-innerpage--back a:hover {
+  color:#2c9fa1 !important;
+}
+
+/* ── Hide Primary Contact, Location, and map ── */
+.mpp-innerpage--special { display:none !important; }
+.mpp-innerpage--map-container { display:none !important; }
+
+/* ── Submit / action buttons ── */
+.mppw-btn, .mppw-btn.primary, input.mppw-btn {
+  background:#333 !important; color:#fff !important;
+  border-radius:8px !important; transition:background 0.2s;
+}
+.mppw-btn:hover, .mppw-btn.primary:hover, input.mppw-btn:hover {
+  background:#2c9fa1 !important;
+}
+
+/* ── Form field labels — override blue ── */
+.mppw-form-field__label,
+.mppw-form-field__alt-label,
+.mppw-blue {
+  color:#555 !important;
+}
+
+/* ── Form field borders ── */
+.mppw-form-field__control {
+  border-color:#ccc !important;
+}
+.mppw-form-field__control:focus {
+  border-color:#2c9fa1 !important;
+}
+.mppw-form-field__control:focus + .mppw-form-field__label {
+  color:#2c9fa1 !important;
+}

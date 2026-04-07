@@ -143,17 +143,18 @@ input {
       min-width: 150px;
       display: inline-block;
       padding: 17px 25px 16px;
-      background: #555555;
-      border-radius: 0px;
+      background: #333;
+      border-radius: 8px;
       margin: 20px auto 0 -9px;
       font-weight: 600;
       font-size: 14px;
       margin: 0 0 20px;
       letter-spacing: 2pt;
+      transition: background 0.2s;
   }
-  
+
   .mppw-btn:hover {
-      background: #aad43c; /*grn green*/
+      background: #2c9fa1;
   }
   
   /* MOBILE */
@@ -166,9 +167,12 @@ input {
   .mppw-component-container h1 {font-size:30px; text-align:center; letter-spacing:0.05em;}
   .mppw-component-container a, .mppw-component-container button, .mppw-component-container input[type="submit"], .mppw-component-container input[type="button"] {transition:all 0.25s ease;}
   .mppw-btn.secondary:hover, .mppw-btn.secondary:focus {background:var(--primary); color:#fff; border-color:var(--primary);}
-  .mppw-card--grid {grid-template-columns:31% 31% 31%; grid-gap:50px 35px;}
-    .mpp-card {box-shadow:0 0 #000; border-radius:0;}
-      .mpp-card--badge {background:#fff; color:var(--primary-dark); padding:12px 10px; border-radius:0; font-size:18px; line-height:1; letter-spacing:-0.5pt; font-weight:500; text-transform:uppercase; text-align:center; opacity:1;}
+  .mppw-card--grid {display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem;}
+  @media(max-width:1023px){ .mppw-card--grid{ grid-template-columns:repeat(2, 1fr); } }
+  @media(max-width:599px){ .mppw-card--grid{ grid-template-columns:1fr; } }
+    .mpp-card {box-shadow:none; border-radius:8px; transition:box-shadow 0.2s;}
+    .mpp-card:hover {box-shadow:0 6px 20px rgba(0,0,0,0.12);}
+      .mpp-card--badge {background:#fff; color:var(--primary-dark); padding:12px 10px; border-radius:8px; font-size:18px; line-height:1; letter-spacing:-0.5pt; font-weight:500; text-transform:uppercase; text-align:center; opacity:1;}
       .mpp-card--subtitle {font-weight:400; font-size:15px; line-height:1.4;}
       .mpp-card--description {margin-top:12px;}
       
@@ -180,11 +184,11 @@ input {
     .mpp-innerpage a:hover, .mpp-innerpage a:focus {color:var(--primary);}
     .mpp-innerpage h1 {font-size:42px; line-height:1.2; text-align:left; padding-top:20px;}
     .mpp-innerpage h2 {font-size:20px; line-height:1.2;}
-    .mpp-innerpage--contact {border-radius:0;}
+    .mpp-innerpage--contact {border-radius:8px;}
     .mpp-innerpage ul.mpp-innerpage--contacts {margin-top:5px;}
     .mpp-innerpage--contacts-wrapper h3, .mpp-innerpage .progress--container h3 {font-size:14px; line-height:1.5; color:var(--primary-dark);}
     .mpp-innerpage--contact-badge {background:var(--primary);}
-    .mpp-innerpage--placeholder {background:#555;}
+    .mpp-innerpage--placeholder {background:#e0e0e0;}
   .mpp-form--tabs label:active, .mpp-form--tabs label.active {border-bottom:3px solid var(--primary); color:var(--primary);}
   .mpp-form--tabs label:hover, .mpp-form--tabs label:focus {border-bottom:3px solid var(--primary);}
   
@@ -254,7 +258,7 @@ input {
   
   
   /* Plan a Visit Widget */
-  #mpp-plan-your-visit-container input.mppw-btn:hover {color:#555; background:#fff;}
+  #mpp-plan-your-visit-container input.mppw-btn:hover {color:#fff; background:#2c9fa1;}
   #mpp-plan-your-visit-container .mpp-innerpage p {color:#fff; line-height:24px;}
   #mpp-plan-your-visit-container .mpp-innerpage h3 {color:#fff;}
   
@@ -262,7 +266,7 @@ input {
   #visitDetailsContainer .mpp-innerpage h2 {color:#fff;}
   #visitDetailsContainer #visitDetailsForm {color:#555;}
   #visitDetailsContainer #submitRegistrationButton {margin:0;}
-  #visitDetailsContainer #submitRegistrationButton:hover {color:#555; background:#fff;}
+  #visitDetailsContainer #submitRegistrationButton:hover {color:#fff; background:#2c9fa1;}
   
   
   /* Event Registration Detail Widget */
@@ -278,8 +282,8 @@ input {
   #registrationForm .mppw-form-field_alt-control {padding:1px 10px !important;}
   #registrationForm .mppw-form-field_alt-control label {margin:10px 0;}
   #registrationForm input#promoCodeText {padding:9px 10px; border:1px solid var(--primary-dark); border-radius:4px;}
-  #registrationForm button#addPromoCodeButton {color:#fff; border:0; text-transform:uppercase; display:inline-block; padding:10px 20px; background:#555555; border-radius:0px; font-weight:600; font-size:14px; letter-spacing:2pt; transition:all .3s ease;}
-  #registrationForm button#addPromoCodeButton:hover {background:#aad43c; cursor:pointer;}
+  #registrationForm button#addPromoCodeButton {color:#fff; border:0; text-transform:uppercase; display:inline-block; padding:10px 20px; background:#333; border-radius:8px; font-weight:600; font-size:14px; letter-spacing:2pt; transition:background 0.2s;}
+  #registrationForm button#addPromoCodeButton:hover {background:#2c9fa1; cursor:pointer;}
   
   #pledgeForm .mppw-form-field {padding-bottom:0.5rem;}
   #pledgeAmountButtonWrapper input[type="button"] {margin-bottom:0;}
@@ -760,10 +764,15 @@ input {
 
 .mp-person-card .mp-person-info {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mp-person-card .mp-card-title {
   font-size: 1.25rem;
+  display: block;
+  width: 100%;
 }
 
 .event-finder-widget .ge-title {color:#333;}
