@@ -170,8 +170,10 @@ input {
   .mppw-card--grid {display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem;}
   @media(max-width:1023px){ .mppw-card--grid{ grid-template-columns:repeat(2, 1fr); } }
   @media(max-width:599px){ .mppw-card--grid{ grid-template-columns:1fr; } }
-    .mpp-card {box-shadow:none; border-radius:8px; transition:box-shadow 0.2s;}
+    .mpp-card {box-shadow:none; border-radius:8px; transition:box-shadow 0.2s; overflow:hidden;}
     .mpp-card:hover {box-shadow:0 6px 20px rgba(0,0,0,0.12);}
+      .mpp-card--header {position:relative; width:100%; padding-top:56.25%; overflow:hidden; background:#e0e0e0;}
+      .mpp-card--image {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;}
       .mpp-card--badge {background:#fff; color:var(--primary-dark); padding:12px 10px; border-radius:8px; font-size:18px; line-height:1; letter-spacing:-0.5pt; font-weight:500; text-transform:uppercase; text-align:center; opacity:1;}
       .mpp-card--subtitle {font-weight:400; font-size:15px; line-height:1.4;}
       .mpp-card--description {margin-top:12px;}
