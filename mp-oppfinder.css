@@ -26,6 +26,9 @@ h4.opportunity-start-date { display:none; }
 #searchForm .mppw-centered { margin:0; }
 #searchForm .mppw-centered .mppw-btn { margin:0; }
 
+/* ── Hide campus and start date on cards ── */
+#resultsContainer h4.opportunity-location { display:none; }
+
 /* ── Card Grid (responsive, matches GrangerEvents) ── */
 #resultsContainer.mppw-card--grid {
   display:grid; grid-template-columns:1fr; gap:1.5rem;
