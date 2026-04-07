@@ -18,15 +18,7 @@
 #advancedSearchSection { display:none !important; }
 h4.opportunity-start-date { display:none; }
 
-/* ── Inline search: keyword box + button on same row ── */
-#searchForm {
-  display:flex; flex-wrap:wrap; align-items:flex-end; gap:0.75rem;
-}
-#searchForm .mppw-form-field:has(#searchText) { flex:1; min-width:200px; }
-#searchForm .mppw-centered { margin:0; }
-#searchForm .mppw-centered .mppw-btn { margin:0; }
-
-/* ── Hide campus and start date on cards ── */
+/* ── Hide campus on cards ── */
 #resultsContainer h4.opportunity-location { display:none; }
 
 /* ── Card Grid (responsive, matches GrangerEvents) ── */
