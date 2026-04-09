@@ -677,6 +677,9 @@ input {
   width: 100%;
 }
 
+/* ── Checkout widget ── */
+.mppw-invoice th, .mppw-invoice .mppw-blue { color: var(--primary-dark); }
+
 /* ── Event Details page overrides ── */
 #detailsContainer .mpp-innerpage--description { display:none !important; }
 
