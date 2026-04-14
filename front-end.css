@@ -1,0 +1,119 @@
+/* root variables */
+:root {
+  --bg-color: #f1efef;
+  --bg-color-highlight: #c6c4c4;
+  --bg-color-hover: #aad43c;
+  --bg-color-light: #fff;
+
+  --font-color-dark:#282828;
+  --font-color-light:#fff;
+  --font-color-highlight:#aad43c;
+}
+
+
+/* styles for banner */
+.sls-mp-widgets-banner {width:100%; height:auto; display:block; padding:20px; box-sizing:border-box; background:url(/wp-content/uploads/2023/01/Untitled-1-1.jpg) no-repeat center / cover; position:relative;}
+.sls-mp-widgets-banner .tint {width:100%; height:100%; background:rgba(0,0,0,.5); position:absolute; top:0; left:0; z-index:1;}
+.sls-mp-widgets-banner .wrapper {display:flex; flex-flow:row nowrap; align-items:center; justify-content:center; padding:7%; color:var(--font-color-light); position:relative; z-index:2;}
+.sls-mp-widgets-banner .wrapper .container {max-width:800px; margin:0; text-align:center;}
+
+
+/* styles for account page */
+#sls-mp-widgets {width:100%; height:auto; display:block; padding:20px; color:var(--font-color-dark); box-sizing:border-box;}
+  .smw-wrapper {width:100%; height:auto; display:flex; flex-flow:row nowrap; align-items:flex-start; gap:20px;}
+    .smw-nav {flex:0 0 auto; background:var(--bg-color);}
+      .smw-nav-menu {display:none; padding:10px 20px; text-align:center; cursor:pointer;}
+      .smw-nav-items {display:block; min-width:200px;}
+        .smw-nav-item {display:block; padding:10px 20px; cursor:pointer;}
+        .smw-nav-item:hover {color:var(--font-color-light); background:var(--bg-color-hover);}
+        .smw-nav-item.selected {color:var(--font-color-light); background:var(--bg-color-highlight);}
+        .smw-nav-item.selected:hover {background:var(--bg-color-hover);}
+    .smw-content {flex:1 1 auto; min-width:200px; padding:20px; background:var(--bg-color);}
+      .smw-tabs {display:block; position:relative;}
+        .smw-tab {width:100%; position:absolute; top:0; left:0; visibility:hidden; opacity:0;}
+        .smw-tab.selected {position:relative; z-index:1; visibility:visible; opacity:1;}
+
+@media(max-width:760px) {
+  .smw-wrapper {flex-flow:row wrap;}
+  .smw-nav {flex:1 1 100%; position:relative;}
+  .smw-nav-menu {display:block;}
+  .smw-nav-items {display:block; width:100%; background:var(--bg-color); opacity:0; visibility:hidden; position:absolute; top:62px; left:0; z-index:10;}
+  .smw-nav-items.show {border-top:1px solid var(--bg-color-highlight); opacity:1; visibility:visible; top:42px;}
+}
+
+
+/* miscellaneous */
+.smw-trans {transition:all .25s ease;}
+
+.mppw-btn {color:var(--font-color-light); background:var(--bg-color-hover); border-radius:0; box-shadow:0 10px 20px rgba(0,0,0,0); transition:all .25s ease;}
+.mppw-btn:hover {color:var(--font-color-light); background:var(--bg-color-hover); box-shadow:0 10px 20px rgba(0,0,0,.15);}
+.mppw-btn.secondary {color:var(--font-color-light); background:var(--bg-color-highlight); border:0;}
+.mppw-btn.secondary:hover {color:var(--font-color-light); background:var(--bg-color-hover);}
+.mppw-btn.secondary:focus {color:var(--font-color-light); background:var(--bg-color-hover);}
+.mppw-btn.secondary:active {color:var(--font-color-light); background:var(--bg-color-highlight);}
+
+.mppw-form-field__control > label:hover input ~ .mppw-checkbox, .mppw-form-field__control > label input:checked ~ .mppw-checkbox {background:var(--bg-color-hover);}
+
+.mpp-household .mppw-form-field--is-valid .mppw-form-field__label, .mpp-household .mppw-form-field--is-invalid .mppw-form-field__label, .mpp-household .mppw-form-field__static-container .mppw-form-field__label, .mpp-household .mppw-form-field__control:not([value=""]) + .mppw-form-field__label, .mpp-household .mppw-form-field__control:focus + .mppw-form-field__label {color:var(--font-color-highlight);}
+
+#householdMemberList {display:flex !important; flex-wrap:wrap;}
+#householdMemberList[style="display: none;"] {display:none !important;}
+
+/* My Household */
+.mpp-household {font-family:'Poppins', Helvetica, Arial, sans-serif;}
+  .mpp-household .mpp-household--header-container {max-width:500px; min-height:60px; margin:16px 0; padding:10px 60px 10px 20px; background:var(--bg-color-light); position:relative;}
+    .mpp-household .mpp-household--header-container h2 {margin:0;}
+  
+  /* edit household name */
+  .mpp-household #editHouseholdName {width:40px; height:40px; display:flex; flex-flow:row wrap; align-items:center; justify-content:center; color:var(--font-color-dark); background:var(--bg-color); border-radius:40px; position:absolute; top:50%; right:10px; transform:translateY(-50%); transition:all .25s ease;}
+  .mpp-household #editHouseholdName:hover {color:var(--font-color-light); background:var(--bg-color-hover);}
+    .mpp-household #editHouseholdName .edit {display:none;}
+  
+  /* add household member */
+  .mpp-household #addNewMember {width:40px; height:40px; display:flex; flex-flow:row wrap; align-items:center; justify-content:center; color:var(--font-color-dark); background:var(--bg-color); border-radius:40px; position:absolute; top:50%; right:10px; transform:translateY(-50%); transition:all .25s ease;}
+  .mpp-household #addNewMember:hover {color:var(--font-color-light); background:var(--bg-color-hover);}
+    .mpp-household #addNewMember .edit {display:none;}
+  
+  .mpp-household .mpp-icon--household {margin-right:0;}
+  .mpp-household .mpp-card--household {width:29.333%; border-radius:0; box-shadow:0 10px 20px rgba(0,0,0,0); transition:all .25s ease; margin:16px 16px 0 0;}
+  .mpp-household .mpp-card--household:hover {box-shadow:0 10px 20px rgba(0,0,0,.15);}
+  .mpp-household .mpp-innerpage--labels {max-width:500px; margin-bottom:16px;}
+  .mpp-household .mpp-innerpage--label {width:100%; height:auto; margin-right:0; padding:10px 20px; background:var(--bg-color-light);}
+  .mpp-household .mpp-innerpage--address-container {width:100%; max-width:500px; float:none; padding:10px 20px; background:var(--bg-color-light);}
+
+
+/* My Giving */
+  #totalGivingValue {color:var(--font-color-highlight);}
+
+/* My Subscriptions*/
+.mpp-subscriptions {font-family:'Poppins', Helvetica, Arial, sans-serif;}
+  .mpp-subscriptions .mpp-subscriptions--search-option {border-radius:0;}
+  .mpp-subscriptions .mppw-form-field__static-container .mppw-form-field__label {color:var(--font-color-highlight);}
+  .mpp-subscriptions .mpp-card-multiselect {background:var(--bg-color-light); border-radius:0; box-shadow:0 10px 20px rgba(0,0,0,0); transition:all .25s ease;}
+  .mpp-subscriptions .mpp-card-multiselect:hover {box-shadow:0 10px 20px rgba(0,0,0,.15);}
+  .mpp-subscriptions .mpp-card-multiselect--checkbox span {border-color:var(--bg-color-highlight); transition:all .25s ease;}
+  .mpp-subscriptions .mpp-card-multiselect--checkbox span:hover {border-color:var(--bg-color-hover); transition:all .25s ease;}
+  .mpp-subscriptions .mpp-card-multiselect--checkbox input:checked ~ span {background:var(--bg-color-hover); border-color:var(--bg-color-hover);}
+  .mpp-subscriptions .mpp-card-multiselect--image-placeholder {background:var(--bg-color-highlight);}
+
+/* My Pledges */
+  .mppw-component-container .resultsContainer.mppw-card--grid .mpp-card {border-radius:0; box-shadow:0 10px 20px rgba(0,0,0,0); transition:all .25s ease;}
+  .mppw-component-container .resultsContainer.mppw-card--grid .mpp-card:hover {box-shadow:0 10px 20px rgba(0,0,0,.15);}
+  .mppw-component-container .resultsContainer.mppw-card--grid .mpp-card .mpp-card--badge {border-radius:0;}
+  
+@media (max-width:1400px) {
+  .mpp-household .mpp-card--household-image, .mpp-household .mpp-card--household-placeholder {width:60px; min-width:60px; height:60px;}
+}
+@media (max-width:1100px) {
+  .mpp-household .mpp-card--household-image, .mpp-household .mpp-card--household-placeholder {width:50px; min-width:50px; height:50px;}
+}
+@media (max-width:1079px) {
+  .mpp-household .mpp-card--household {width:45%;}
+}
+@media (max-width:920px) {
+  .mpp-household .mpp-card--household {width:100%; margin-right:0;}
+  .mppw-card--grid {display:block; margin-bottom:16px;}
+}
+@media (max-width:767px) {
+  .mpp-household--form-row.w-50 {width:auto;}
+}
