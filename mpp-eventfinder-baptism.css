@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════════
+* Baptism Registration event finder overrides
+ * ═══════════════════════════════════════════════════════ */
+@import url("mp-widgets.css");
+@import url("https://cdn.jsdelivr.net/gh/Granger-Community-Church/MPCustomWidgets@main/dist/css/mp-custom.css");
+
+/* hide the search form */
+#searchForm {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
