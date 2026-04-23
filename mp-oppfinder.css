@@ -95,6 +95,9 @@ h4.opportunity-start-date { display:none; }
 .mpp-innerpage--special { display:none !important; }
 .mpp-innerpage--map-container { display:none !important; }
 
+/* ── Show description (override mp-widgets.css default hide) ── */
+#detailsContainer .mpp-innerpage--description { display:block !important; }
+
 /* ── Submit / action buttons ── */
 .mppw-btn, .mppw-btn.primary, input.mppw-btn {
   background:#333 !important; color:#fff !important;
