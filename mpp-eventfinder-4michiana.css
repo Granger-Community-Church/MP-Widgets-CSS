@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════════
+ * 4Michiana Event Finder overrides
+ * ═══════════════════════════════════════════════════════ */
+@import url("mp-widgets.css");
+@import url("https://cdn.jsdelivr.net/gh/Granger-Community-Church/MPCustomWidgets@main/dist/css/mp-custom.css");
+
+/* event finder 4michiana custom */
+.mpp-card--footer {
+    text-align: center;
+}
+
+.mpp-innerpage--special-content {
+    padding-left: 0px;
+}
+
+.mp-embed-2022 .wrapper .content {
+    max-width: 955px !important;
+}
+
+.mpp-innerpage--rally-location {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+
+/* hide event detail elements not used on 4Michiana */
+.mppw-ics-link,
+#saveAndAddButton,
+div > div > div.mppw-form-wrapper,
+div.mpp-innerpage--contacts-wrapper,
+#addAnotherButton,
+#emptyContainer {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
