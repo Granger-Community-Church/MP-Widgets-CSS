@@ -603,6 +603,10 @@ input {
 
 .ge-modal-desc { font-size:1rem; line-height:1.7; color:#333; }
 .ge-modal-desc img { max-width:100%; height:auto; }
+.ge-modal-desc a,
+.ge-modal-desc a:visited { color:#000; text-decoration:underline; }
+.ge-modal-desc a:hover,
+.ge-modal-desc a:focus { color:#2c9fa1; }
 
 .ge-close {
   position:absolute; top:0.75rem; right:0.75rem; width:2.25rem; height:2.25rem;
