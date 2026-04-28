@@ -366,6 +366,12 @@ input {
   
   .mpp-innerpage--special {display:none;}
 
+/* Apollos and MP widgets both read ?id=<GUID> from the URL. On MP widget
+ * pages the GUID isn't an Apollos project, so Apollos mounts an empty
+ * full-viewport modal that blocks clicks on the form underneath.
+ * Hide it only when empty so real Apollos modals still work elsewhere. */
+.apollos-modal:empty { display: none; }
+
 /* ═══════════════════════════════════════════════════════
  * MP Custom Widget Shared Utilities
  * Extracted from MPCustomWidgets/dist/css/mp-custom.css
