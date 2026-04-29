@@ -488,6 +488,24 @@ input {
  * Source: MPCustomWidgets/Widgets/GrangerEvents
  * ═══════════════════════════════════════════════════════ */
 
+/* ── Toolbar / Search ── */
+.ge-toolbar { margin-bottom:1.5rem; font-family:Poppins, sans-serif; }
+.ge-search {
+  width:100%; max-width:420px; box-sizing:border-box;
+  padding:0.625rem 1rem;
+  font-family:Poppins, sans-serif; font-size:1rem; color:#333;
+  background:#fff; border:1px solid #ccc; border-radius:8px;
+  transition:border-color 0.2s, box-shadow 0.2s;
+}
+.ge-search:focus {
+  outline:none; border-color:#2c9fa1;
+  box-shadow:0 0 0 3px rgba(44,159,161,0.15);
+}
+.ge-no-results {
+  padding:2rem 1rem; text-align:center; color:#555;
+  font-family:Poppins, sans-serif; font-size:1rem;
+}
+
 /* ── Card Grid ── */
 .ge-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; font-family:Poppins, sans-serif; }
 @media(min-width:600px){ .ge-grid{ grid-template-columns:repeat(2, 1fr); } }
