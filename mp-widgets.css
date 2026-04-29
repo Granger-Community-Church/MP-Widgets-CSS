@@ -593,7 +593,7 @@ input {
 .ge-overlay.ge-open { display:flex; }
 
 @media (max-width: 768px) {
-  .ge-overlay { padding-top:5rem; }
+  .ge-overlay { padding-top:7rem; }
 }
 
 .ge-modal {
