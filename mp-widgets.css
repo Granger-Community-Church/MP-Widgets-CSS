@@ -489,9 +489,9 @@ input {
  * ═══════════════════════════════════════════════════════ */
 
 /* ── Toolbar / Search ── */
-.ge-toolbar { margin-bottom:1.5rem; font-family:Poppins, sans-serif; }
+.ge-toolbar { margin-bottom:1.5rem; font-family:Poppins, sans-serif; display:flex; justify-content:center; }
 .ge-search {
-  width:100%; max-width:420px; box-sizing:border-box;
+  width:100%; max-width:600px; box-sizing:border-box;
   padding:0.625rem 1rem;
   font-family:Poppins, sans-serif; font-size:1rem; color:#333;
   background:#fff; border:1px solid #ccc; border-radius:8px;
