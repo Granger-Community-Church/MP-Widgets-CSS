@@ -592,6 +592,10 @@ input {
 }
 .ge-overlay.ge-open { display:flex; }
 
+@media (max-width: 768px) {
+  .ge-overlay { padding-top:5rem; }
+}
+
 .ge-modal {
   background:#fff; border-radius:8px; max-width:700px; width:100%;
   margin:auto; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3);
