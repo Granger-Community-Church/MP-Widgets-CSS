@@ -1,0 +1,401 @@
+/* =========================================================================
+   Granger Community Church — Wufoo theme overrides
+   Goal: make embedded Wufoo forms read as the same family as the stock
+         Webflow form on grangerchurch.com (Poppins + grey/teal palette).
+
+   Where to paste:
+     Wufoo → Forms → (form) → Theme → Customize Theme (or "Theme Designer")
+     → Custom CSS panel. Save. The hosted form + every embed picks it up.
+
+   Notes:
+     - Wufoo's base + 2018 theme CSS uses !important heavily, so this file
+       also uses !important. That is intentional, not lazy.
+     - The Wufoo embed lives inside an <iframe>, which is why this CSS
+       cannot live on the Webflow side — it has to ship with the form.
+     - Built against Webflow values captured from the share-your-story page
+       at 1440 / 991 / 767 / 479 px. The Webflow form is full-width and
+       does not change across breakpoints, so neither does this.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ---------- Palette (matches Webflow custom properties) ----------------- */
+#container.redesigned-theme-2018 {
+  --gcc-text:        #333;          /* --grey-500  */
+  --gcc-text-muted:  #565556;       /* --grey-400  */
+  --gcc-border:      #ccc;
+  --gcc-focus:       #3898ec;       /* Webflow w-input focus */
+  --gcc-placeholder: #999;
+  --gcc-btn-bg:      #333;          /* --grey-500  */
+  --gcc-btn-hover:   #2c9fa1;       /* --teal-500  */
+  --gcc-btn-fg:      #fff;
+  --gcc-bg:          transparent;   /* let the host page show through */
+  background: var(--gcc-bg) !important;
+  border: none !important;
+}
+
+/* ---------- Base typography on the form body ---------------------------- */
+html,
+body#public {
+  background: transparent !important;
+}
+
+.redesigned-theme-2018 .wufoo,
+.redesigned-theme-2018 .wufoo input,
+.redesigned-theme-2018 .wufoo textarea,
+.redesigned-theme-2018 .wufoo select,
+.redesigned-theme-2018 .wufoo button,
+.redesigned-theme-2018 .wufoo label,
+.redesigned-theme-2018 .wufoo legend,
+.redesigned-theme-2018 .wufoo .info h2,
+.redesigned-theme-2018 .wufoo .info div,
+.redesigned-theme-2018 .wufoo .section h3,
+.redesigned-theme-2018 .wufoo .section div,
+.redesigned-theme-2018 .wufoo li,
+.redesigned-theme-2018 .wufoo li div,
+.redesigned-theme-2018 .wufoo li span,
+.redesigned-theme-2018 .wufoo li.paging-context b * {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif !important;
+}
+
+/* ---------- List reset (defensive) -------------------------------------- */
+/* Wufoo's own runtime CSS hides ul bullets, but older base stylesheets
+   (and the offline theme-kit preview) leave them in. Force it.           */
+.redesigned-theme-2018 .wufoo ul,
+.wufoo ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.redesigned-theme-2018 .wufoo ul li,
+.wufoo ul li {
+  list-style: none !important;
+  background-image: none !important;
+}
+
+/* ---------- Form title (info header) ------------------------------------ */
+/* Webflow page already has an <h1> banner; the Wufoo H2 stays but in
+   Poppins so it reads as part of the same design system.                  */
+.redesigned-theme-2018 .wufoo .info {
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+.redesigned-theme-2018 .wufoo .info h2,
+.redesigned-theme-2018 .wufoo .info h2 * {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 28px !important;
+  line-height: 1.2 !important;
+  color: var(--gcc-text) !important;
+  letter-spacing: -0.01em !important;
+}
+
+.redesigned-theme-2018 .wufoo .info div,
+.redesigned-theme-2018 .wufoo .info div * {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: var(--gcc-text) !important;
+}
+
+/* ---------- Field labels ------------------------------------------------ */
+/* Main label per question — matches Webflow <label>: 14/20, weight 700.   */
+.redesigned-theme-2018 .wufoo label.desc,
+.redesigned-theme-2018 .wufoo legend.desc,
+.redesigned-theme-2018 .likert caption,
+.redesigned-theme-2018 .wufoo label.desc *,
+.redesigned-theme-2018 .wufoo legend.desc * {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 20px !important;
+  color: var(--gcc-text) !important;
+  margin-bottom: 5px !important;
+  text-transform: none !important;
+}
+
+/* Sub-labels (e.g. "First" / "Last" under Name, "###" under Phone).
+   Webflow doesn't have an analog so we keep them, just lighter.          */
+.redesigned-theme-2018 .wufoo li div label,
+.redesigned-theme-2018 .wufoo li span label {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: var(--gcc-text-muted) !important;
+  letter-spacing: 0 !important;
+}
+
+/* Required asterisk */
+.redesigned-theme-2018 .wufoo .req,
+.redesigned-theme-2018 .wufoo span.req {
+  color: var(--gcc-text) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Inputs / textareas / selects -------------------------------- */
+.redesigned-theme-2018 .wufoo input.text,
+.redesigned-theme-2018 .wufoo input.file,
+.redesigned-theme-2018 .wufoo select.select,
+.redesigned-theme-2018 .wufoo textarea.textarea {
+  background: #fff !important;
+  background-image: none !important;            /* kill Wufoo's fieldbg.gif */
+  border: 1px solid var(--gcc-border) !important;
+  border-radius: 0 !important;                  /* matches Webflow w-input  */
+  box-shadow: none !important;
+  color: var(--gcc-text) !important;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  padding: 8px 12px !important;
+  height: 38px !important;
+  margin-bottom: 10px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  transition: border-color .15s ease-in-out !important;
+}
+
+.redesigned-theme-2018 .wufoo textarea.textarea {
+  height: auto !important;
+  min-height: 100px !important;
+  resize: vertical !important;
+}
+
+/* Placeholders */
+.redesigned-theme-2018 .wufoo input.text::placeholder,
+.redesigned-theme-2018 .wufoo textarea.textarea::placeholder,
+.redesigned-theme-2018 .wufoo select.select::placeholder {
+  color: var(--gcc-placeholder) !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+
+/* Focus */
+.redesigned-theme-2018 .wufoo input.text:focus,
+.redesigned-theme-2018 .wufoo input.file:focus,
+.redesigned-theme-2018 .wufoo select.select:focus,
+.redesigned-theme-2018 .wufoo textarea.textarea:focus {
+  border-color: var(--gcc-focus) !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Disabled / readonly */
+.redesigned-theme-2018 .wufoo input.text[disabled],
+.redesigned-theme-2018 .wufoo input.text[readonly],
+.redesigned-theme-2018 .wufoo textarea.textarea[disabled],
+.redesigned-theme-2018 .wufoo textarea.textarea[readonly] {
+  background-color: #eee !important;
+  cursor: not-allowed !important;
+}
+
+/* Wufoo's base CSS sets fixed pixel widths on .fn / .ln / phone inputs
+   via the HTML `size` attribute and float-based span columns. That
+   leaves the Name and Phone rows cramped (≈88px boxes) regardless of
+   viewport. Convert each <li>'s direct-child span columns to flex so
+   they fill the row and breathe naturally.                              */
+
+.redesigned-theme-2018 .wufoo input.fn,
+.redesigned-theme-2018 .wufoo input.ln {
+  width: 100% !important;
+}
+
+/* Name field: two-span row → 50/50.
+   Targeted by :has(input.fn) — Wufoo applies .fn/.ln to first/last name
+   inputs across every form, so this is stable across form IDs.          */
+.redesigned-theme-2018 .wufoo li:has(input.fn) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  padding: 0 !important;
+}
+
+.redesigned-theme-2018 .wufoo li:has(input.fn) > label.desc {
+  flex: 0 0 100% !important;
+}
+
+.redesigned-theme-2018 .wufoo li:has(input.fn) > span {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  float: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+.redesigned-theme-2018 .wufoo li:has(input.fn) > span > input.text {
+  width: 100% !important;
+}
+
+/* Phone field: input — separator — input — separator — input.
+   Inputs flex, .symbol stays auto-sized.                                */
+.redesigned-theme-2018 .wufoo li.phone {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+}
+
+.redesigned-theme-2018 .wufoo li.phone > label.desc {
+  flex: 0 0 100% !important;
+}
+
+.redesigned-theme-2018 .wufoo li.phone > span {
+  float: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+.redesigned-theme-2018 .wufoo li.phone > span:not(.symbol) {
+  flex: 1 1 0 !important;
+}
+
+.redesigned-theme-2018 .wufoo li.phone > span.symbol {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  color: var(--gcc-text-muted) !important;
+  font-weight: 400 !important;
+  align-self: center !important;
+  padding-bottom: 10px !important;     /* align with input margin-bottom */
+}
+
+.redesigned-theme-2018 .wufoo li.phone input.text {
+  width: 100% !important;
+  text-align: center !important;
+  min-width: 0 !important;
+}
+
+/* Generic safety: any <li> with two or more floated <span> children that
+   Wufoo didn't already wrap in a <div> gets the same flex treatment.
+   This catches future multi-column fields without listing IDs.          */
+.redesigned-theme-2018 .wufoo li:not(.buttons):not(.section):not(.hide) {
+  box-sizing: border-box !important;
+}
+
+/* ---------- Field spacing ---------------------------------------------- */
+.redesigned-theme-2018 .wufoo ul li {
+  margin-bottom: 14px !important;
+}
+
+.redesigned-theme-2018 .wufoo li.section {
+  margin-top: 24px !important;
+  margin-bottom: 12px !important;
+}
+
+/* ---------- Submit button (matches Webflow .button-default, centered) -- */
+.redesigned-theme-2018 .wufoo li.buttons {
+  text-align: center !important;
+  padding-top: 8px !important;
+}
+
+.redesigned-theme-2018 .wufoo input.btTxt,
+.redesigned-theme-2018 .wufoo input.btTxt.submit,
+.redesigned-theme-2018 .wufoo button.btTxt {
+  background: var(--gcc-btn-bg) !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  color: var(--gcc-btn-fg) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 22.4px !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  padding: 12px 24px !important;
+  margin: 10px 0 0 !important;
+  display: inline-block !important;
+  box-shadow: 0 12px 16px -4px rgba(0,0,0,0.08) !important;
+  transition: background-color .3s ease-in-out, transform .3s ease-in-out !important;
+  cursor: pointer !important;
+  text-shadow: none !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+.redesigned-theme-2018 .wufoo input.btTxt:hover,
+.redesigned-theme-2018 .wufoo input.btTxt.submit:hover,
+.redesigned-theme-2018 .wufoo button.btTxt:hover {
+  background: var(--gcc-btn-hover) !important;
+  color: var(--gcc-btn-fg) !important;
+}
+
+.redesigned-theme-2018 .wufoo input.btTxt:focus,
+.redesigned-theme-2018 .wufoo input.btTxt.submit:focus {
+  outline: 2px solid var(--gcc-focus) !important;
+  outline-offset: 2px !important;
+}
+
+.redesigned-theme-2018 .wufoo input.btTxt:disabled {
+  background: #e0e0e0 !important;
+  color: #999 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Validation states ------------------------------------------ */
+.redesigned-theme-2018 .wufoo li.error input.text,
+.redesigned-theme-2018 .wufoo li.error textarea.textarea,
+.redesigned-theme-2018 .wufoo li.error select.select {
+  border-color: #d33 !important;
+  background: #fff !important;
+}
+
+.redesigned-theme-2018 .wufoo p.error,
+.redesigned-theme-2018 .wufoo .errMsg {
+  background: transparent !important;
+  border: none !important;
+  color: #d33 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  margin-top: 4px !important;
+  padding: 0 !important;
+}
+
+/* ---------- Confirmation page ------------------------------------------ */
+.redesigned-theme-2018 .confirm h2,
+.redesigned-theme-2018 .confirm h2 * {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--gcc-text) !important;
+}
+
+.redesigned-theme-2018 .confirm,
+.redesigned-theme-2018 .confirm * {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* ---------- Responsive tweaks ------------------------------------------ */
+/* Webflow's form is full-width and does not change across breakpoints.
+   We mirror that and only add safety bumps for the very narrow viewports
+   where the Wufoo phone-number triple-input gets cramped.                */
+
+@media (max-width: 767px) {
+  .redesigned-theme-2018 .wufoo .info h2 {
+    font-size: 24px !important;
+  }
+  .redesigned-theme-2018 .wufoo input.btTxt,
+  .redesigned-theme-2018 .wufoo input.btTxt.submit {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .redesigned-theme-2018 .wufoo .info h2 {
+    font-size: 22px !important;
+  }
+  /* Phone inputs were laid out side-by-side; on tiny screens give them
+     room without overflowing the form column.                            */
+  .redesigned-theme-2018 .wufoo li.phone input.text {
+    margin-bottom: 6px !important;
+  }
+}
