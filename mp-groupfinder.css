@@ -1,0 +1,14 @@
+/* ═══════════════════════════════════════════════════════
+ * Group Finder / Group Details Widget
+ * <mpp-group-finder> on /groups
+ * <mpp-group-details> on /groupdetails
+ * Imports shared base, then applies group-specific overrides.
+ * ═══════════════════════════════════════════════════════ */
+@import url("mp-widgets.css");
+
+/* ══════════════════════════════════════════════════════════
+ * DETAIL PAGE — <mpp-group-details>
+ * ══════════════════════════════════════════════════════════ */
+
+/* ── Show group description (override mp-widgets.css default hide) ── */
+#detailsContainer .mpp-innerpage--description { display:block !important; }

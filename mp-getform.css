@@ -1,0 +1,12 @@
+/* ═══════════════════════════════════════════════════════
+ * Standalone Get-Form Widget
+ * Imports shared base, then applies get-form-specific overrides.
+ * ═══════════════════════════════════════════════════════ */
+@import url("mp-widgets.css");
+
+/* ══════════════════════════════════════════════════════════
+ * FORM PAGE — standalone get-form
+ * ══════════════════════════════════════════════════════════ */
+
+/* ── Show form title (override mp-widgets.css default hide) ── */
+div > div > div.mppw-form-wrapper > h1 { display:block !important; }
