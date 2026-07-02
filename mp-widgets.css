@@ -719,3 +719,11 @@ input {
 	.event-finder-widget .container {padding:0;}
 	.event-finder-widget .mp-container {max-width:none;}
 }
+
+/* Center the event-finder embed inside Webflow's flex .panel---code-embed section.
+   At >=1440px the Webflow shared CSS gives .main-container fixed 56px side margins,
+   which pin it hard-left in the justify-content:space-between flex parent. Scoped
+   via :has() so only sections containing the event-finder embed are affected. */
+@media (min-width:1440px) {
+	.panel---code-embed:has(.event-finder-widget) { justify-content:center; }
+}
