@@ -13,6 +13,9 @@
     padding-left: 0px;
 }
 
+/* ── Show event description (override mp-widgets.css default hide) ── */
+#detailsContainer .mpp-innerpage--description { display:block !important; }
+
 .mp-embed-2022 .wrapper .content {
     max-width: 955px !important;
 }
