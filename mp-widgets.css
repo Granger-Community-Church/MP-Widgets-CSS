@@ -280,7 +280,7 @@ input {
   #registrationForm .mppw-form-field-alt label {margin-bottom:0;}
   #registrationForm select.mppw-form-field_alt-control {padding:15px 10px !important;}
   #registrationForm .mppw-form-field_alt-control {padding:1px 10px !important;}
-  #registrationForm .mppw-form-field_alt-control label {margin:10px 0;}
+  #registrationForm .mppw-form-field_alt-control label {margin:10px 30px 10px 0;}
   #registrationForm input#promoCodeText {padding:9px 10px; border:1px solid var(--primary-dark); border-radius:4px;}
   #registrationForm button#addPromoCodeButton {color:#fff; border:0; text-transform:uppercase; display:inline-block; padding:10px 20px; background:#333; border-radius:8px; font-weight:600; font-size:14px; letter-spacing:2pt; transition:background 0.2s;}
   #registrationForm button#addPromoCodeButton:hover {background:#2c9fa1; cursor:pointer;}
