@@ -98,6 +98,19 @@ h4.opportunity-start-date { display:none; }
 /* ── Show description (override mp-widgets.css default hide) ── */
 #detailsContainer .mpp-innerpage--description { display:block !important; }
 
+/* ── Hide "Tell us a little about yourself" per opportunity ──
+   #formMessage wraps the optional Message textarea (#messageText).
+   The field is not required, so hiding it never blocks validation —
+   responses just save with an empty Message.
+
+   Scoped by the hidden #opportunityId input that the widget renders
+   inside #responseForm. To hide the field on another opportunity, copy
+   a line and change the number to that opportunity's ID (the ?id= value
+   in the /volunteer-details URL). Leave every other opportunity alone.
+   ── */
+#responseForm:has(#opportunityId[value="2119"]) #formMessage
+  { display:none !important; }
+
 /* ── Submit / action buttons ── */
 .mppw-btn, .mppw-btn.primary, input.mppw-btn {
   background:#333 !important; color:#fff !important;

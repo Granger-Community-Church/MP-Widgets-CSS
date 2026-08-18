@@ -22,3 +22,27 @@ Example:
 > `.mppw-icon-group` default image and `.mpp-innerpage` heading sizes) are
 > candidates to migrate into `mp-groupfinder.css` in a future pass so the
 > base file becomes leaner.
+
+### Opportunity Details — per-opportunity message field
+
+`mp-oppfinder.css` carries a hand-maintained allowlist controlling the optional
+"Tell us a little about yourself:" textarea (`#formMessage`) on the opportunity
+signup form. It is **shown by default** — many opportunities rely on it as the only
+free-text field — and hidden only for the opportunity IDs listed in the rule.
+
+To hide it on another opportunity, copy a selector line and swap in that
+opportunity's ID (the `?id=` value in its `/volunteer-details` URL):
+
+```css
+#responseForm:has(#opportunityId[value="2119"]) #formMessage,
+#responseForm:has(#opportunityId[value="1234"]) #formMessage
+  { display:none !important; }
+```
+
+The field is optional in MinistryPlatform, so hiding it never blocks form
+validation — responses simply save with an empty Message.
+
+> **Deploying:** the Webflow embed loads this file via its `customcss` attribute
+> pointing at jsDelivr `@main`, which is cached. After pushing, either purge the
+> file at `purge.jsdelivr.net` or bump a `?v=` query string on the `customcss`
+> attribute in Webflow before the change goes live.
